@@ -57,9 +57,7 @@ my_circle_hitbox = CircleHitbox(position=[100, 100], radius=50, owner="Player")
 import math
 triangle_size = 80
 triangle_height = triangle_size * (math.sqrt(3) / 2)
-triangle_vertices = [(0, -triangle_height / 2),
-(-triangle_size / 2, triangle_height / 2),
-(triangle_size / 2, triangle_height / 2)]
+triangle_vertices = [(0, -triangle_height / 2),(-triangle_size / 2, triangle_height / 2),(triangle_size / 2, triangle_height / 2)]
 my_triangle_hitbox = TriangleHitbox(position=[200, 200], vertices_local=triangle_vertices, owner="Wall")
 
 # Example: Create a RotatedRectHitbox
