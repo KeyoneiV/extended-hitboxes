@@ -73,7 +73,7 @@ from collision_lib import check_collision
 if check_collision(my_circle_hitbox, my_triangle_hitbox):
     print("Circle is colliding with Triangle!")
 else:
-    print("No collision.")
+    print("No collision")
 
 # You can check any combination:
 # if check_collision(my_circle_hitbox, my_rotated_rect_hitbox):
