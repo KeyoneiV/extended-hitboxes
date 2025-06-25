@@ -57,9 +57,7 @@ my_circle_hitbox = CircleHitbox(position=[100, 100], radius=50, owner="Player")
 import math
 triangle_size = 80
 triangle_height = triangle_size * (math.sqrt(3) / 2)
-triangle_vertices = [(0, -triangle_height / 2),
-(-triangle_size / 2, triangle_height / 2),
-(triangle_size / 2, triangle_height / 2)]
+triangle_vertices = [(0, -triangle_height / 2),(-triangle_size / 2, triangle_height / 2),(triangle_size / 2, triangle_height / 2)]
 my_triangle_hitbox = TriangleHitbox(position=[200, 200], vertices_local=triangle_vertices, owner="Wall")
 
 # Example: Create a RotatedRectHitbox
@@ -75,7 +73,7 @@ from collision_lib import check_collision
 if check_collision(my_circle_hitbox, my_triangle_hitbox):
     print("Circle is colliding with Triangle!")
 else:
-    print("No collision.")
+    print("No collision")
 
 # You can check any combination:
 # if check_collision(my_circle_hitbox, my_rotated_rect_hitbox):
