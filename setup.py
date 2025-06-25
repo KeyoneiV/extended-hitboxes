@@ -5,15 +5,15 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="extended-hitboxes",  # This is the name your package will be installed as
-    version="0.1.0",           # Start with 0.1.0 as a first release
+    name="extended-hitboxes",
+    version="0.1.1",
     author="Keyonei Victory",
-    author_email="your.email@example.com", # Replace with your actual email
+    author_email="vkeyonei@gmail.com",
     description="A lightweight and extensible 2D collision detection library for Pygame.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/KeyoneiV/extended-hitboxes", # This should be your GitHub repo URL
-    packages=setuptools.find_packages(), # Automatically finds your 'collision_lib' package
+    url="https://github.com/KeyoneiV/extended-hitboxes",
+    packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
