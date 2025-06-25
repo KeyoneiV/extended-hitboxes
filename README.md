@@ -1,4 +1,6 @@
-Extended Hitboxes
+
+# Extended Hitboxes
+
 A lightweight and extensible 2D collision detection library for Pygame applications, designed to provide accurate and flexible collision handling beyond basic rectangles.
 
 # Features
@@ -43,7 +45,7 @@ pip install .
 
 (Ensure you have pygame installed in your environment: pip install pygame)
 
-Usage
+# Usage
 Once installed, you can import and use Extended Hitboxes in your Pygame project.
 
 1. Creating Hitboxes
@@ -58,9 +60,13 @@ my_circle_hitbox = CircleHitbox(position=[100, 100], radius=50, owner="Player")
 Vertices are relative to the triangle's center (0,0)
 
 import math
+
 triangle_size = 80
+
 triangle_height = triangle_size * (math.sqrt(3) / 2)
+
 triangle_vertices = [(0, -triangle_height / 2),(-triangle_size / 2, triangle_height / 2),(triangle_size / 2, triangle_height / 2)]
+
 my_triangle_hitbox = TriangleHitbox(position=[200, 200], vertices_local=triangle_vertices, owner="Wall")
 
 # Example: Create a RotatedRectHitbox
@@ -88,7 +94,8 @@ if check_collision(my_triangle_hitbox, my_rotated_rect_hitbox):
    Each hitbox class has a draw() method that takes a Pygame surface, color, and optional line width.
 
 # In your Pygame game loop:
-# screen = pygame.display.set_mode((WIDTH, HEIGHT))
+
+screen = pygame.display.set_mode((WIDTH, HEIGHT))
 
 # Draw the hitboxes
 my_circle_hitbox.draw(screen, (255, 0, 0), 2) # Red circle outline
@@ -98,11 +105,11 @@ my_rotated_rect_hitbox.draw(screen, (0, 0, 255), 2) # Blue rectangle outline
 # Optionally draw AABBs for broad-phase debugging:
 pygame.draw.rect(screen, (255, 255, 0), my_circle_hitbox.get_aabb(), 1)
 
-Contributing
+# Contributing
 Contributions are welcome! If you have suggestions or want to improve the algorithms, feel free to open an issue or submit a pull request.
 
-License
+# License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-Author
+# Author
 Keyonei Victory
