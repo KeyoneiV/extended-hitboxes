@@ -1,0 +1,36 @@
+
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Distribution and build artifacts
+dist/
+build/
+*.egg
+*.egg-info/ # Specifically ignores directories ending with .egg-info
+.coverage
+.pytest_cache/
+htmlcov/
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# IDE-specific files (PyCharm example)
+.idea/      # PyCharm project settings directory
+*.iml       # PyCharm module files
+
+# Operating System temporary files
+.DS_Store   # macOS
+Thumbs.db   # Windows
+
+# Misc files
+*.log
+*.tmp
