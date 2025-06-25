@@ -2,14 +2,16 @@
 # === Imports ===
 
 import pygame
+import math
 
 # === Base Hitbox Class ===
 
 class BaseHitbox():
 
-    def __init__(self,position,owner=None):
+    def __init__(self,position,is_static=False,owner=None):
         self.position = position
         self.owner = owner
+        self.is_static = False
 
     def get_aabb(self):
         """
@@ -29,8 +31,8 @@ class BaseHitbox():
 
 class CircleHitbox(BaseHitbox):
 
-    def __init__(self,position,radius,owner=None):
-        super().__init__(position,owner)
+    def __init__(self,position,radius,is_staic=False,owner=None):
+        super().__init__(position,is_staic,owner)
         self.radius = radius
 
     def get_aabb(self):
@@ -47,9 +49,9 @@ class CircleHitbox(BaseHitbox):
 
 class TriangleHitbox(BaseHitbox):
 
-    def __init__(self,position,vertices_local,owner=None):
+    def __init__(self,position,vertices_local,is_static=False,owner=None):
 
-        super().__init__(position, owner)
+        super().__init__(position,is_static=is_static,owner=owner)
         # Store vertices relative to the triangle's 'position' (center)
         # e.g., [(x1, y1), (x2, y2), (x3, y3)] where (0,0) is the triangle's center
         self.vertices_local = [list(v) for v in vertices_local]
@@ -75,8 +77,8 @@ class TriangleHitbox(BaseHitbox):
         pygame.draw.polygon(surface, color, self._get_world_vertices(), width)
 
 class RotatedRectHitbox(BaseHitbox):
-    def __init__(self, position, width, height, angle=0.0, owner=None):
-        super().__init__(position, owner)
+    def __init__(self, position, width, height, angle=0.0,is_static=False,owner=None):
+        super().__init__(position,is_static,owner)
         self.width = width
         self.height = height
         self.angle = angle # Store in radians for math functions

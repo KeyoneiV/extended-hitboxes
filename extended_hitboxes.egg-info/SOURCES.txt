@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+collision_lib/__init__.py
+collision_lib/algorithms.py
+collision_lib/dispatch.py
+collision_lib/hitboxes.py
+extended_hitboxes.egg-info/PKG-INFO
+extended_hitboxes.egg-info/SOURCES.txt
+extended_hitboxes.egg-info/dependency_links.txt
+extended_hitboxes.egg-info/requires.txt
+extended_hitboxes.egg-info/top_level.txt

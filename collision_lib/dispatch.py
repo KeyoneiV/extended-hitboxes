@@ -4,12 +4,16 @@ from .hitboxes import BaseHitbox, CircleHitbox, TriangleHitbox, RotatedRectHitbo
 from .algorithms import (
     _collide_circle_circle,
     _collide_circle_triangle,
+    _collide_triangle_triangle,
+    _collide_rotated_rect_rotated_rect,
 )
 
 _COLLISION_FUNCTIONS = {
     (CircleHitbox, CircleHitbox): _collide_circle_circle,
     (CircleHitbox, TriangleHitbox): _collide_circle_triangle,
     (TriangleHitbox, CircleHitbox): lambda t, c: _collide_circle_triangle(c, t),
+    (TriangleHitbox, TriangleHitbox): _collide_triangle_triangle,
+    (RotatedRectHitbox, RotatedRectHitbox): _collide_rotated_rect_rotated_rect,
 }
 
 def check_collision(hitbox_a: BaseHitbox, hitbox_b: BaseHitbox) -> bool:
