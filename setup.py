@@ -1,6 +1,6 @@
 import setuptools
 
-# Read the contents of the README.md file for the long description
+
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
@@ -18,15 +18,15 @@ setuptools.setup(
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
-        "Development Status :: 3 - Alpha", # Indicates it's in early development
+        "Development Status :: 3 - Alpha",
         "Intended Audience :: Developers",
         "Topic :: Games/Entertainment",
         "Topic :: Software Development :: Libraries :: Python Modules",
         "Framework :: Pygame",
     ],
-    python_requires='>=3.7', # Specify the minimum Python version required
+    python_requires='>=3.7',
     install_requires=[
-        "pygame>=2.0.0", # Specify Pygame as a dependency
+        "pygame>=2.0.0",
     ],
     keywords="pygame collision hitbox 2d game-development library",
 )
