@@ -6,7 +6,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="extended-hitboxes",
-    version="0.2.2",
+    version="0.2.3",
     author="Keyonei Victory",
     author_email="vkeyonei@gmail.com",
     description="A lightweight and extensible 2D collision detection library for Pygame.",

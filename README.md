@@ -43,6 +43,10 @@ Install locally using pip:
 
 pip install .
 
+Or install remotely from PyPI:
+
+pip install extended-hitboxes
+
 (Ensure you have pygame installed in your environment: pip install pygame)
 
 # Usage
@@ -70,7 +74,7 @@ triangle_vertices = [(0, -triangle_height / 2),(-triangle_size / 2, triangle_hei
 my_triangle_hitbox = TriangleHitbox(position=[200, 200], vertices_local=triangle_vertices, owner="Wall")
 
 # Example: Create a RotatedRectHitbox
-# Angle is in radians
+Angle is in radians
 my_rotated_rect_hitbox = RotatedRectHitbox(position=[300, 300], width=100, height=50, angle=math.radians(45), owner="Door")
 
 2. Checking for Collisions

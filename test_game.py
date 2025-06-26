@@ -1,11 +1,8 @@
 import pygame
 import sys
-import math  # Needed for angle conversions and triangle vertex calculations
+import math
 
-# Import your custom hitbox classes and the main collision check function
-# Python will find 'collision_lib' because test_game.py is at the same level
-# as the 'collision_lib' package directory.
-from collision_lib import CircleHitbox, TriangleHitbox, RotatedRectHitbox, check_collision
+from extended_hitboxes import CircleHitbox, TriangleHitbox, RotatedRectHitbox, check_collision
 
 # --- Pygame Initialisation ---
 pygame.init()
@@ -32,7 +29,7 @@ AABB_COLOR = (100, 100, 100)  # Dark Grey
 
 # 1. Circles
 circle1 = CircleHitbox(position=[150, 150], radius=50, owner="Circle_A")
-circle2 = CircleHitbox(position=[300, 150], radius=40, owner="Circle_B")  # Movable by mouse
+circle2 = CircleHitbox(position=[300, 150], radius=40, owner="Circle_B")
 
 # 2. Triangles
 triangle_size = 100
@@ -44,7 +41,7 @@ triangle_vertices_local = [
 ]
 triangle1 = TriangleHitbox(position=[400, 200], vertices_local=triangle_vertices_local, owner="Triangle_A")
 triangle2 = TriangleHitbox(position=[550, 200], vertices_local=triangle_vertices_local,
-                           owner="Triangle_B")  # Movable by mouse/keyboard
+                           owner="Triangle_B")
 
 # 3. Rotated Rectangles
 rect_width = 120
@@ -83,8 +80,7 @@ while running:
 
     # --- Update Movable Objects ---
     mouse_x, mouse_y = pygame.mouse.get_pos()
-    circle2.position = [mouse_x, mouse_y]  # Move Circle2 with mouse
-
+    circle2.position = [mouse_x, mouse_y]
     # --- Collision Checks ---
 
     # Circle-Circle
